@@ -1,0 +1,237 @@
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 10rem 0 5rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h1 {
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-dim);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.hero-btns {
+    justify-content: center;
+}
+
+/* Sections */
+.section-padding {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    margin-bottom: 1rem;
+}
+
+.accent-line {
+    width: 80px;
+    height: 4px;
+    background: var(--color-accent);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.benefit-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Classes */
+.class-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.class-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Installations */
+.install-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.install-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.install-subtitle {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.install-title {
+    margin-top: 1rem;
+}
+
+.install-line {
+    width: 60px;
+    height: 3px;
+    background: var(--color-accent);
+    margin: 1.5rem auto;
+}
+
+.machine-grid-wrapper {
+    margin-top: var(--spacing-lg);
+}
+
+.machine-img-container {
+    height: 150px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+}
+
+.machine-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.machine-img:hover {
+    transform: scale(1.1);
+}
+
+.machine-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.machine-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.machine-info {
+    font-size: 0.9rem;
+    color: var(--color-text-dim);
+}
+
+.machine-location-label {
+    opacity: 0.6;
+}
+
+/* Internal hover classes */
+.hover-zoom:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .machine-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-auto-rows: 150px !important;
+    }
+    .machine-grid .premium-card {
+        grid-column: span 2 !important;
+    }
+}
+
+/* Trainers */
+.trainer-section-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.trainer-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.trainer-name {
+    margin-top: 1rem;
+}
+
+.trainer-specialty {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Pricing */
+.pricing-section {
+    background-color: var(--color-bg);
+}
+
+.pricing-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.pricing-list {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-dim);
+    list-style: none;
+    padding: 0;
+}
+
+/* Testimonials */
+.testimonial-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.testimonial-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.testimonial-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    position: relative;
+}
+
+.testimonial-stars {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--color-accent);
+}

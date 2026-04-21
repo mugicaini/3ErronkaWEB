@@ -1,0 +1,263 @@
+/* Klaseak (Calendar) Page Specific Styles */
+
+/* ===== LAYOUT ===== */
+.calendar-container {
+    padding: 5rem 0;
+    background: var(--color-bg);
+    min-height: calc(100vh - 400px);
+    transition: background 0.5s ease;
+}
+
+body.argia .calendar-container {
+    background: linear-gradient(to bottom, #F0F0F0, #FFFFFF);
+}
+
+.hero-classes {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/class_antigravity_yoga_1774528634127.png') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.calendar-card {
+    background: var(--color-glass);
+    backdrop-filter: blur(20px);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-accent-soft);
+    box-shadow: 0 40px 100px var(--color-shadow);
+    margin-top: -100px;
+    position: relative;
+    z-index: 10;
+    transition: background 0.5s ease;
+}
+
+body.argia .calendar-card {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== FULLCALENDAR CORE ===== */
+#calendar {
+    color: var(--color-text);
+    padding: 1rem;
+}
+
+.fc {
+    --fc-border-color: var(--color-accent-soft) !important;
+    --fc-today-bg-color: var(--color-accent-soft) !important;
+    --fc-list-event-hover-bg-color: var(--color-accent-soft) !important;
+}
+
+/* Force FullCalendar background to respect dark theme */
+body.iluna .fc-view-harness,
+body.iluna .fc-daygrid,
+body.iluna .fc-scrollgrid,
+body.iluna .fc-scrollgrid-liquid,
+body.iluna .fc-col-header,
+body.iluna th.fc-col-header-cell,
+body.iluna td.fc-daygrid-day {
+    background: transparent !important;
+}
+
+body.iluna .fc-scrollgrid-section > td {
+    border-color: rgba(197, 164, 109, 0.15) !important;
+}
+
+/* Force FullCalendar background for light theme */
+body.argia .fc-view-harness,
+body.argia .fc-daygrid,
+body.argia .fc-scrollgrid,
+body.argia .fc-scrollgrid-liquid,
+body.argia .fc-col-header,
+body.argia th.fc-col-header-cell,
+body.argia td.fc-daygrid-day {
+    background: transparent !important;
+}
+
+body.argia .fc-scrollgrid-section > td {
+    border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.argia .fc {
+    --fc-page-bg-color: transparent !important;
+    --fc-neutral-bg-color: rgba(0, 0, 0, 0.02) !important;
+    --fc-border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ===== TOOLBAR ===== */
+.fc .fc-toolbar-title {
+    font-family: var(--font-header) !important;
+    font-size: 2.5rem !important;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.fc .fc-button-primary {
+    background: transparent !important;
+    border: 1px solid var(--color-accent) !important;
+    color: var(--color-accent) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s !important;
+    border-radius: 50px !important;
+    padding: 0.6rem 1.5rem !important;
+}
+
+.fc .fc-button-primary:hover,
+.fc .fc-button-active {
+    background: var(--color-accent) !important;
+    color: #111 !important;
+}
+
+/* ===== HEADER CELLS (Days of week) ===== */
+.fc-col-header-cell {
+    padding: 1.5rem 0 !important;
+    background: transparent !important;
+}
+
+.fc-col-header-cell-cushion {
+    color: var(--color-accent) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    text-decoration: none !important;
+}
+
+/* ===== DAY CELLS ===== */
+.fc-daygrid-day-number {
+    font-family: var(--font-body);
+    font-weight: 300;
+    padding: 10px !important;
+    opacity: 0.8;
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+}
+
+body.argia .fc-daygrid-day-number {
+    color: #333 !important;
+}
+
+/* ===== EVENTS ===== */
+.fc-event {
+    border-radius: 4px !important;
+    padding: 4px 8px !important;
+    border: none !important;
+    font-size: 0.85rem !important;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.fc-event:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+/* ===== TOOLTIP ===== */
+#event-tooltip {
+    position: fixed;
+    background: var(--color-glass);
+    backdrop-filter: blur(10px);
+    color: var(--color-text);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 15px 30px var(--color-shadow);
+    transform: translateY(10px);
+}
+
+#event-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.argia #event-tooltip {
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+}
+
+.tip-title {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* New Extracted Styles */
+.hero-classes h1 {
+    margin-bottom: 1rem;
+}
+
+.hero-classes p {
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.calendar-info {
+    text-align: center;
+    color: var(--color-text-dim);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+}
+
+.login-notice {
+    color: var(--color-accent);
+    background: rgba(197,164,109,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.modal-title {
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+.modal-text {
+    color: var(--color-text-dim);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.modal-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Event Types */
+.fc-event.event-special {
+    background-color: #C5A46D !important;
+    border-color: #fff !important;
+    color: #1A1A1A !important;
+    box-shadow: 0 5px 15px rgba(197, 164, 109, 0.4) !important;
+    border-left: 5px solid #fff !important;
+}
+
+.fc-event.event-normal {
+    background-color: rgba(43, 43, 43, 0.7) !important;
+    border-color: rgba(197, 164, 109, 0.2) !important;
+    color: #fff !important;
+    border-left: 5px solid #C5A46D !important;
+}
+
+body.argia .fc-event.event-normal {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #333 !important;
+}
