@@ -1,0 +1,142 @@
+.profile-container {
+    padding: 8rem 1rem 3rem;
+    min-height: 100vh;
+}
+
+.profile-card {
+    background: var(--color-glass);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 2rem;
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.user-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--color-text-dark);
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.1);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.info-item label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.info-item span {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.res-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.res-table th {
+    text-align: left;
+    padding: 1rem;
+    color: var(--color-accent);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.res-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-konfirmatuta { background: rgba(0, 255, 136, 0.2); color: #00ff88; }
+.status-desapuntatuta { background: rgba(255, 77, 109, 0.2); color: #ff4d6d; }
+.status-kanzelatuta { background: rgba(255, 165, 0, 0.2); color: #ffa500; }
+
+/* Additional Profile Styles */
+.profile-title {
+    margin-bottom: 2rem;
+}
+
+.user-name {
+    margin-bottom: 0.5rem;
+}
+
+.user-id {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+}
+
+.status-active {
+    color: #00ff88;
+    display: block;
+}
+
+.cancel-form {
+    margin-top: 1rem;
+}
+
+.btn-cancel-sub {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-color: rgba(255, 77, 109, 0.5);
+    color: #ff4d6d;
+}
+
+.status-canceled {
+    color: #ff4d6d;
+    display: block;
+}
+
+.btn-cancel-res {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+    color: #ff4d6d;
+    border-color: rgba(255, 77, 109, 0.3);
+}
+
+.no-reservations {
+    color: var(--color-text-dim);
+    text-align: center;
+}
+
+.accent-link {
+    color: var(--color-accent);
+}
